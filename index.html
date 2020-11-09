@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/basic.css">
+    <link rel="stylesheet" href="./estilos/main.css">
+    <!-- <link rel="stylesheet" href="./estilos/about.css"> -->
+    <title>Miranda Fotografia</title>
+</head>
+
+<body>
+    <header>
+        <h1>Miranda Fotografia</h1>
+        <h3>Eu quero celebrar a beleza de cada ser humano.</h3>
+    </header>
+    <main>
+        <section>
+            <h2>Sobre Mim</h2>
+            <p>Oi, eu sou a Miranda, e o meu intuito aqui é mostrar as pessoas reais, que têm "imperfeições" e
+                "defeitos", mostrar o natural, ao contrário da mídia que apresenta rostos e corpos inalcançáveis.</p>
+        </section>
+        <section>
+            <h2>Portfólio</h2>
+            <div class="mural">
+                <div class="foto">Fotinha</div>
+                <div class="foto">Ôta fotinha</div>
+                <div class="foto">Mais uma fotinha</div>
+                <div class="foto">E mais otra</div>
+            </div>
+        </section>
+        <section>
+            <h2>Feedback</h2>
+            <p>"A Luiza é uma fotógrafa incrível e uma pessoa ainda melhor, eu tenho muito orgulho de namorar essa
+                deusa."<br /> _ Artur de Andrade</p>
+        </section>
+        <section>
+            <h2>Quer fazer um ensaio?</h2>
+            <h4>Me manda um e-mail!</h4>
+            <form id="contato" action="/" method="POST">
+
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <br />
+                    <input class="info" type="text" id="nome" name="nome" placeholder="Seu nominho" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <br />
+                    <input class="info" type="email" id="email" name="email"
+                        placeholder="O seu melhor e-mail vai aqui :3" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <br />
+                    <textarea class="info" form="contact-form" id="mensagem" name="mensagem" rows="4"
+                        placeholder="Me diz o tipo de ensaio que você tem em mente, qual dia e horário você gostaria de marcar, vou te responder assim que possível!"
+                        required></textarea>
+                </div>
+
+                <div class="campo">
+                    <input class="botao" type="submit" value="Mandar e-mail">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>Me siga nas redes sociais</h3>
+        <ul>
+            <li>Instagram</li>
+            <li>Pinterest</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

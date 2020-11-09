@@ -1,0 +1,42 @@
+header, footer, section {
+    padding: 1em;
+    margin: 1em .5em;
+}
+  
+.mural {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto {
+    width: 8em;
+    height: 6em;
+    padding: .5em;
+    border: 2px solid black;
+    margin: .5em;
+}
+
+/*---------------------*/
+
+.campo {
+    margin: .25rem;
+}
+
+.info,
+.botao {
+    width: 100%;
+    padding: .5rem .25rem;
+    border: 2px solid black;
+    border-radius: .25rem .25rem 0 0;
+    margin: .5rem auto;
+}
+
+footer > ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer > ul > li {
+    font-size: 1.3em;
+    margin: 1em;
+}
