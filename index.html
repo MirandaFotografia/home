@@ -4,18 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/269b8a45dd.js" crossorigin="anonymous"></script>
+    <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./estilos/basic.css">
     <link rel="stylesheet" href="./estilos/main.css">
-    <!-- <link rel="stylesheet" href="./estilos/about.css"> -->
     <title>Miranda Fotografia</title>
 </head>
 
 <body>
     <header>
-        <h1>Miranda Fotografia</h1>
-        <h3>Eu quero celebrar a beleza de cada ser humano.</h3>
+        <div class="titulo">
+            <h1>Miranda Fotografia</h1>
+            <h3>Eu quero celebrar a beleza de cada ser humano.</h3>
+        </div>
+        <button><i class="fas fa-moon"></i></button>
     </header>
     <main>
+        <section class="banner">
+            <div class="carrossel" id="carrossel">
+                <figure>
+                    <img class="imagem" src="./assets/fotos/foto_0001.jpeg" alt="">
+                </figure>
+                <figure>
+                    <img class="imagem" src="./assets/fotos/foto_0006.jpeg" alt="">
+                </figure>
+                <figure>
+                    <img class="imagem" src="./assets/fotos/foto_0007.jpeg" alt="">
+                </figure>
+                <figure>
+                    <img class="imagem" src="./assets/fotos/foto_0015.jpeg" alt="">
+                </figure>
+                <figure>
+                    <img class="imagem" src="./assets/fotos/foto_0018.jpeg" alt="">
+                </figure>
+            </div>
+        </section>
         <section>
             <h2>Sobre Mim</h2>
             <p>Oi, eu sou a Miranda, e o meu intuito aqui é mostrar as pessoas reais, que têm "imperfeições" e
@@ -24,10 +47,10 @@
         <section>
             <h2>Portfólio</h2>
             <div class="mural">
-                <div class="foto">Fotinha</div>
-                <div class="foto">Ôta fotinha</div>
-                <div class="foto">Mais uma fotinha</div>
-                <div class="foto">E mais otra</div>
+                <div class="foto" style="background-color: crimson;">Fotinha</div>
+                <div class="foto" style="background-color: gold;">Ôta fotinha</div>
+                <div class="foto" style="background-color: royalblue;">Mais uma fotinha</div>
+                <div class="foto" style="background-color: saddlebrown;">E mais otra</div>
             </div>
         </section>
         <section>
@@ -69,10 +92,7 @@
     </main>
     <footer>
         <h3>Me siga nas redes sociais!</h3>
-        <ul>
-            <li>Instagram</li>
-            <li>Pinterest</li>
-        </ul>
+        <a href="https://instagram.com/mirandafotografi.a"><i class="fab fa-instagram"></i> Instagram</a>
     </footer>
 </body>
 

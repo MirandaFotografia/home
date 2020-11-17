@@ -2,21 +2,48 @@ header, footer, section {
     padding: 1em;
     margin: 1em .5em;
 }
+
+/* Header */
+
+header {
+    display: flex;
+}
+
+/* TODO: CARROSSEL */
+
+.banner {
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    position: relative;
+    left: 0;
+    width: 500%;
+    margin: 0;
+    touch-action: none;
+}
+
+.imagem {
+    height: 30rem;
+}
+
+/* Mural de Fotos */
   
 .mural {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .foto {
-    width: 8em;
+    width: 85%;
     height: 6em;
     padding: .5em;
     border: 2px solid black;
     margin: .5em;
 }
 
-/*---------------------*/
+/* Formulário de Contato */
 
 .campo {
     margin: .25rem;
@@ -29,14 +56,4 @@ header, footer, section {
     border: 2px solid black;
     border-radius: .25rem .25rem 0 0;
     margin: .5rem auto;
-}
-
-footer > ul {
-    display: flex;
-    justify-content: flex-start;
-}
-
-footer > ul > li {
-    font-size: 1.3em;
-    margin: 1em;
 }
