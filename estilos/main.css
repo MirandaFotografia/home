@@ -1,12 +1,28 @@
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
 header, footer, section {
-    padding: 1em;
-    margin: 1em .5em;
+    padding: .5em;
+    margin: 1em;
 }
 
 /* Header */
 
 header {
     display: flex;
+    justify-content: space-between;
+}
+
+.modo-escuro {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: .5rem;
+    border: 2px solid var(--borda);
+    border-radius: 50%;
+    background-color: var(--cor);
+    color: var(--texto);
 }
 
 /* TODO: CARROSSEL */
@@ -39,8 +55,10 @@ header {
     width: 85%;
     height: 6em;
     padding: .5em;
-    border: 2px solid black;
+    border: 2px solid var(--borda);
     margin: .5em;
+    background-color: var(--cor);
+    color: var(--texto);
 }
 
 /* Formulário de Contato */
@@ -53,7 +71,7 @@ header {
 .botao {
     width: 100%;
     padding: .5rem .25rem;
-    border: 2px solid black;
+    border: 2px solid var(--borda);
     border-radius: .25rem .25rem 0 0;
     margin: .5rem auto;
 }

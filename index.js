@@ -1,3 +1,12 @@
+// Modo Escuro
+const botao = document.querySelector('#modo-escuro')
+const modo = document.documentElement
+
+botao.addEventListener('click', e => {
+    modo.style.setProperty('--escuro', modo.style.getPropertyValue('--escuro') === '1' ? 0 : 1)
+})
+
+// Carrossel de Fotos
 const carrossel = document.querySelector('#carrossel')
 let posicao = null
 let movendo = false
