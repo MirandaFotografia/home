@@ -1,16 +1,10 @@
-// Modo Escuro
-const botao = document.querySelector('#modo-escuro')
-const modo = document.documentElement
-
-botao.addEventListener('click', e => {
-    modo.style.setProperty('--escuro', modo.style.getPropertyValue('--escuro') === '1' ? 0 : 1)
-})
-
 // Carrossel de Fotos
 const carrossel = document.querySelector('#carrossel')
 let posicao = null
 let movendo = false
 let translacao = 0
+
+document.querySelectorAll('.carrossel__imagem').ondragstart = () => false
 
 const inicio = e => {
     posicao = e.pageX
@@ -24,7 +18,9 @@ const inicio = e => {
 const meio = e => {
     if (movendo) {
         const movimento = e.pageX - posicao
-        carrossel.style.transform = `translateX(${movimento + translacao}px)`
+        if (movimento + translacao < 0 && movimento + translacao > -1450) {
+            carrossel.style.transform = `translateX(${movimento + translacao}px)`
+        }
     }
 }
 
@@ -33,14 +29,16 @@ const fim = e => {
 }
 
 if (window.PointerEvent) {
-    window.addEventListener('pointerdown', inicio)
-    window.addEventListener('pointermove', meio)
-    window.addEventListener('pointerup', fim)
-} else {
-    window.addEventListener('mousedown', inicio)
-    window.addEventListener('mousemove', meio)
-    window.addEventListener('mouseup', fim)
-    window.addEventListener('touchstart', inicio)
-    window.addEventListener('touchmove', meio)
-    window.addEventListener('touchend', fim)
-}
+    carrossel.addEventListener('pointerdown', inicio)
+    carrossel.addEventListener('pointermove', meio)
+    carrossel.addEventListener('pointerup', fim)
+}// else {
+//     carrossel.addEventListener('mousedown', inicio)
+//     carrossel.addEventListener('mousemove', meio)
+//     carrossel.addEventListener('mouseup', fim)
+//     carrossel.addEventListener('touchstart', inicio)
+//     carrossel.addEventListener('touchmove', meio)
+//     carrossel.addEventListener('touchend', fim)
+// }
+
+// Mural de Fotos

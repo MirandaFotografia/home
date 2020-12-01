@@ -1,6 +1,7 @@
 body {
     background-color: var(--fundo);
     color: var(--texto);
+    font-family: var(--open);
 }
 
 header, footer, section {
@@ -8,21 +9,15 @@ header, footer, section {
     margin: 1em;
 }
 
+h1 {
+    font-family: var(--proza);
+}
+
 /* Header */
 
 header {
     display: flex;
     justify-content: space-between;
-}
-
-.modo-escuro {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: .5rem;
-    border: 2px solid var(--borda);
-    border-radius: 50%;
-    background-color: var(--cor);
-    color: var(--texto);
 }
 
 /* TODO: CARROSSEL */
@@ -40,25 +35,29 @@ header {
     touch-action: none;
 }
 
-.imagem {
+.carrossel__imagem {
     height: 30rem;
 }
 
 /* Mural de Fotos */
   
 .mural {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .foto {
-    width: 85%;
-    height: 6em;
-    padding: .5em;
-    border: 2px solid var(--borda);
-    margin: .5em;
-    background-color: var(--cor);
-    color: var(--texto);
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--borda);
+}
+
+.imagem {
+    transition: 500ms;
+}
+
+.imagem:hover {
+    transform: scale(3);
 }
 
 /* Formulário de Contato */

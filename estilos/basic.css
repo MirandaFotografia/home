@@ -1,10 +1,11 @@
 :root {
-  --escuro: 0;
-  --fundo: hsl(0, 0%, calc((92 - (var(--escuro, 0) * 84)) * 1%));
-  --cor: hsl(calc(48 - (var(--escuro, 0) * 20)), 100%, calc((44 - (var(--escuro, 0) * 12)) * 1%));
-  --borda: hsl(8, calc((62 + (var(--escuro, 0) * 38)) * 1%), 28%);
-  --texto: hsl(36, calc((32 + (var(--escuro, 0) * 68)) * 1%), calc((12 + (var(--escuro, 0) * 48)) * 1%));
+  --fundo: #E7DDDA;
+  --cor: #7E564C;
+  --borda: #692716;
+  --texto: #2F2523;
   font-size: 16px;
+  --open: 'Open Sans', sans-serif;
+  --proza: 'Proza Libre', sans-serif;
 }
 
 * {
