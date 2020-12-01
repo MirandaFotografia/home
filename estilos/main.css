@@ -44,6 +44,7 @@ header {
 .mural {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: .25rem;
 }
 
 .foto {
@@ -56,8 +57,17 @@ header {
     transition: 500ms;
 }
 
-.imagem:hover {
-    transform: scale(3);
+.imagem:focus {
+    outline: none;
+    transform: scale(3.3);
+}
+
+.imagem:nth-child(3n - 2):focus {
+    transform: scale(3.3) translateX(33%);
+}
+
+.imagem:nth-child(3n):focus {
+    transform: scale(3.3) translateX(-33%);
 }
 
 /* Formulário de Contato */
@@ -73,4 +83,10 @@ header {
     border: 2px solid var(--borda);
     border-radius: .25rem .25rem 0 0;
     margin: .5rem auto;
+}
+
+.botao {
+    font-size: 26px;
+    background-color: var(--cor);
+    color: var(--fundo);
 }
