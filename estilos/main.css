@@ -9,8 +9,16 @@ header, footer, section {
     margin: 1em;
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: var(--proza);
+}
+
+h2 {
+    display: inline-block;
+    padding: 0 .5rem;
+    border-right: 3px dashed var(--borda);
+    border-bottom: 3px dashed var(--borda);
+    margin-bottom: 1rem;
 }
 
 /* Header */
@@ -20,7 +28,17 @@ header {
     justify-content: space-between;
 }
 
-/* TODO: CARROSSEL */
+/* Sobre Mim */
+
+.perfil {
+    float: right;
+    width: 10rem;
+    border: 1px solid var(--borda);
+    border-radius: 50%;
+    shape-outside: circle(50%);
+}
+
+/* Carrossel */
 
 .banner {
     overflow: hidden;
@@ -70,6 +88,15 @@ header {
     transform: scale(3.3) translateX(-33%);
 }
 
+/* Feedbacks */
+
+.feedback {
+    display: flow-root;
+    padding: .5em;
+    border-top: 4px dotted var(--borda);
+    margin-top: 1rem;
+}
+
 /* Formulário de Contato */
 
 .campo {
@@ -79,14 +106,20 @@ header {
 .info,
 .botao {
     width: 100%;
+    height: auto;
     padding: .5rem .25rem;
     border: 2px solid var(--borda);
     border-radius: .25rem .25rem 0 0;
     margin: .5rem auto;
+    background-color: var(--cor);
+    color: var(--texto);
+    font-size: 16px;
 }
 
 .botao {
     font-size: 26px;
-    background-color: var(--cor);
-    color: var(--fundo);
+}
+
+.mensagem {
+    min-height: 7rem;
 }
