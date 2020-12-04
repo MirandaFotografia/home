@@ -35,27 +35,44 @@ header {
     width: 10rem;
     border: 1px solid var(--borda);
     border-radius: 50%;
+    margin: .75rem;
     shape-outside: circle(50%);
 }
 
 /* Carrossel */
 
-.banner {
-    overflow: hidden;
-}
-
 .carrossel {
     display: flex;
-    position: relative;
-    left: 0;
-    width: 500%;
-    margin: 0;
-    touch-action: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .carrossel__imagem {
-    height: 30rem;
+    display: none;
+    height: 20rem;
+    border: 2px solid var(--borda);
 }
+
+.selecionada {
+    display: initial;
+}
+
+.carrossel__botao {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-size: 42px;
+}
+
+#voltar {
+    visibility: hidden;
+    /* float: left; */
+}
+
+/* #avancar {
+    float: right;
+} */
 
 /* Mural de Fotos */
   
