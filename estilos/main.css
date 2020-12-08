@@ -1,12 +1,14 @@
 body {
+    width: 100vw;
     background-color: var(--fundo);
     color: var(--texto);
     font-family: var(--open);
+    overflow-x: hidden;
 }
 
 header, footer, section {
     padding: .5em;
-    margin: 1em;
+    margin: 1em 0;
 }
 
 h1, h2, h3, h4 {
@@ -16,8 +18,8 @@ h1, h2, h3, h4 {
 h2 {
     display: inline-block;
     padding: 0 .5rem;
-    border-right: 3px dashed var(--borda);
-    border-bottom: 3px dashed var(--borda);
+    border: 3px var(--borda);
+    border-style: none dashed dashed none;
     margin-bottom: 1rem;
 }
 
@@ -26,6 +28,54 @@ h2 {
 header {
     display: flex;
     justify-content: space-between;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    top: 0;
+    width: 50vw;
+    height: 72vh;
+    border: 2px var(--borda);
+    border-style: none none solid solid;
+    border-radius: 1rem;
+    position: absolute;
+    transform: translateX(200%);
+    transition: var(--transicao);
+    background-color: var(--fundo);
+}
+
+.menu__botao {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-size: 42px;
+}
+
+.atalhos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.atalhos > a {
+    padding: 1rem;
+    font-size: 20px;
+}
+
+.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: var(--transicao);
+    background-image: linear-gradient(#000b, #0000);
+    visibility: hidden;
 }
 
 /* Sobre Mim */
@@ -45,6 +95,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
+    border: 4px var(--borda);
+    border-style: dotted none dotted none;
 }
 
 .carrossel__imagem {
@@ -67,12 +120,7 @@ header {
 
 #voltar {
     visibility: hidden;
-    /* float: left; */
 }
-
-/* #avancar {
-    float: right;
-} */
 
 /* Mural de Fotos */
   
@@ -89,20 +137,20 @@ header {
 }
 
 .imagem {
-    transition: 500ms;
+    transition: var(--transicao);
 }
 
 .imagem:focus {
     outline: none;
-    transform: scale(3.3);
+    transform: scale(3.2);
 }
 
 .imagem:nth-child(3n - 2):focus {
-    transform: scale(3.3) translateX(33%);
+    transform: scale(3.2) translateX(32.5%);
 }
 
 .imagem:nth-child(3n):focus {
-    transform: scale(3.3) translateX(-33%);
+    transform: scale(3.2) translateX(-32.5%);
 }
 
 /* Feedbacks */
@@ -110,8 +158,11 @@ header {
 .feedback {
     display: flow-root;
     padding: .5em;
-    border-top: 4px dotted var(--borda);
     margin-top: 1rem;
+}
+
+.feedback:not(:first-of-type) {
+    border-top: 4px dotted var(--borda);
 }
 
 /* Formulário de Contato */
@@ -128,6 +179,7 @@ header {
     border: 2px solid var(--borda);
     border-radius: .25rem .25rem 0 0;
     margin: .5rem auto;
+    outline-color: var(--cor);
     background-color: var(--cor);
     color: var(--texto);
     font-size: 16px;
@@ -135,6 +187,12 @@ header {
 
 .botao {
     font-size: 26px;
+}
+
+.info:focus, 
+.botao:focus {
+    background-color: var(--texto);
+    color: var(--cor);
 }
 
 .mensagem {

@@ -1,4 +1,5 @@
 :root {
+  --transicao: .5s;
   --fundo: #a27f5f;
   --cor: #cab6a7;
   --borda: #4b251b;
@@ -27,10 +28,11 @@ p {
   line-height: 1.8;
 }
 
-a {
-  text-decoration: none;
-}
-
 li {
   list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
 }
