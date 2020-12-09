@@ -16,28 +16,43 @@
 <body>
     <header>
         <div class="conteiner">
-            <button class="menu__botao" id="abrir"><i class="fas fa-bars"></i></button>
-            <nav class="menu" id="menu">
+            <button class="menu__botao"><i class="fas fa-bars"></i></button>
+            <nav class="menu">
                 <ul class="atalhos">
-                    <a href="#portfolio">
-                        <li>
-                            Portfólio
-                        </li>
-                    </a>
-                    <a href="#feedbacks">
-                        <li>
-                            Feedbacks
-                        </li>
-                    </a>
-                    <a href="#contato">
-                        <li>
-                            Contato
-                        </li>
-                    </a>
+                    <li>
+                        <a class="menu__link" rel="noopener noreferrer" href="./about.html">
+                            <i class="icone fas fa-user-circle"></i>
+                            <span class="menu__texto">Sobre Mim</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__link" rel="noopener noreferrer" href="./#portfolio">
+                            <i class="icone fas fa-images"></i>
+                            <span class="menu__texto">Portfólio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__link" rel="noopener noreferrer" href="./#feedbacks">
+                            <i class="icone fas fa-comments"></i>
+                            <span class="menu__texto">Feedbacks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__link" rel="noopener noreferrer" href="#">
+                            <i class="icone fas fa-camera-retro"></i>
+                            <span class="menu__texto">Pacotes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__link" rel="noopener noreferrer" href="./#contato">
+                            <i class="icone fas fa-envelope"></i>
+                            <span class="menu__texto">Contato</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <a href="./">
+        <a class="inicio" rel="noopener noreferrer" href="./">
             <h1>Miranda Fotografia</h1>
             <h3>Eu quero celebrar a beleza de cada ser humano.</h3>
         </a>
@@ -51,24 +66,6 @@
             <img class="carrossel__imagem imagem4" id="carrossel" src="./assets/banner/banner_0004.jpeg" alt="">
             <img class="carrossel__imagem imagem5" id="carrossel" src="./assets/banner/banner_0005.jpeg" alt="">
             <button class="carrossel__botao" id="avancar"><i class="fas fa-chevron-right"></i></button>
-        </section>
-        <section>
-            <h2>Sobre Mim</h2>
-            <figure>
-                <img class="perfil" src="./assets/perfil/miranda.jpeg" alt="">
-                <figcaption>
-                    <p>Oiê, eu sou a Luiza, profissionalmente Miranda, sou fotógrafa voltada pro lifestyle mas que topa
-                        qualquer ideia que o cliente estiver disposto. Mas o que "lifestyle" significa? Basicamente eu
-                        vou sempre preferir fazer o ensaio na casa do cliente, pq é lá que ele vai se sentir mais
-                        confortável, é lá que a vida dele ocorre e também é lá que acontece a magia de ser único, nossos
-                        gostos e particularidades ficam evidentes na nossa casa, e eu quero mostrar essa intimidade nas
-                        minhas fotos, mas se o cliente não curtir tanto a gente dá um jeito de fazer um ensaio diferente
-                        e maravilhoso mesmo assim. Meus nichos são ensaios e eventos, isso quer dizer que são minha
-                        especialidade, logo, se eu recusar fazer um ensaio fora do meu nicho não quer dizer que não
-                        gostaria, mas sim que não faria com tanta excelência. Basicamente é isso que tenho a dizer de
-                        mais importante!</p>
-                </figcaption>
-            </figure>
         </section>
         <section id="portfolio">
             <h2>Portfólio</h2>
@@ -250,7 +247,7 @@
     </main>
     <footer>
         <h3>Me siga nas redes sociais!</h3>
-        <a href="https://instagram.com/mirandafotografi.a"><i class="fab fa-instagram"></i> Instagram</a>
+        <a rel="noopener noreferrer" href="https://instagram.com/mirandafotografi.a"><i class="fab fa-instagram"></i> Instagram</a>
     </footer>
 </body>
 

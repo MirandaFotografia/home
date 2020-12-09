@@ -21,11 +21,31 @@ h2 {
     margin-bottom: 1rem;
 }
 
+a:link {
+    color: var(--link);
+}
+
+a:visited {
+    color: #660666;
+}
+
+a:hover {
+    color: #3d2520;
+}
+
+a:active {
+    color: #660636;
+}
+
 /* Header */
 
 header {
     display: flex;
     justify-content: space-between;
+}
+
+.inicio:visited {
+    color: var(--texto);
 }
 
 .conteiner {
@@ -40,7 +60,6 @@ header {
     height: 72vh;
     border: 2px solid var(--borda);
     border-radius: 1rem;
-    transition: var(--transicao);
     background-color: var(--fundo);
 }
 
@@ -65,9 +84,33 @@ header {
     height: 100%;
 }
 
-.atalhos > a {
-    padding: 1rem;
+.atalhos > li {
+    width: 100%;
+}
+
+.menu__link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .75rem;
     font-size: 20px;
+}
+
+.menu__link:visited {
+    color: var(--link);
+}
+
+.menu__link:hover {
+    background-color: var(--texto);
+    color: var(--cor);
+}
+
+.menu__link:active {
+    background-color: var(--link);
+}
+
+.icone {
+    font-size: 1.8rem;
 }
 
 /* Sobre Mim */
