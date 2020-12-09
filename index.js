@@ -1,23 +1,23 @@
 // Menu
 
-const botaoAbrir = document.querySelector('#abrir')
-const botaoFechar = document.querySelector('#fechar')
-const menu = document.querySelector('#menu')
-const fundo = document.querySelector('#fundo')
+// const botaoAbrir = document.querySelector('#abrir')
+// const botaoFechar = document.querySelector('#fechar')
+// const menu = document.querySelector('#menu')
+// const fundo = document.querySelector('#fundo')
 
-const abrir = () => {
-    menu.style.transform = "translateX(100%)"
-    fundo.style.visibility = "initial"
-}
-const fechar = () => {
-    menu.style.transform = "translateX(200%)"
-    fundo.style.visibility = "hidden"
-}
+// const abrir = () => {
+//     menu.style.transform = "translateX(100%)"
+//     fundo.style.visibility = "initial"
+// }
+// const fechar = () => {
+//     menu.style.transform = "translateX(200%)"
+//     fundo.style.visibility = "hidden"
+// }
 
-botaoAbrir.addEventListener('click', abrir)
-botaoFechar.addEventListener('click', fechar)
-fundo.addEventListener('click', fechar)
-window.addEventListener('scroll', fechar)
+// botaoAbrir.addEventListener('click', abrir)
+// botaoFechar.addEventListener('click', fechar)
+// fundo.addEventListener('click', fechar)
+// window.addEventListener('scroll', fechar)
 
 // Carrossel de Fotos
 

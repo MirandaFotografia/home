@@ -1,9 +1,7 @@
 body {
-    width: 100vw;
     background-color: var(--fundo);
     color: var(--texto);
     font-family: var(--open);
-    overflow-x: hidden;
 }
 
 header, footer, section {
@@ -30,19 +28,24 @@ header {
     justify-content: space-between;
 }
 
+.conteiner {
+    display: inline-block;
+    position: relative;
+}
+
 .menu {
-    display: grid;
-    grid-template-columns: 3rem auto;
-    top: 0;
+    display: none;
+    position: absolute;
     width: 50vw;
     height: 72vh;
-    border: 2px var(--borda);
-    border-style: none none solid solid;
+    border: 2px solid var(--borda);
     border-radius: 1rem;
-    position: absolute;
-    transform: translateX(200%);
     transition: var(--transicao);
     background-color: var(--fundo);
+}
+
+.conteiner:hover .menu {
+    display: block;
 }
 
 .menu__botao {
@@ -65,17 +68,6 @@ header {
 .atalhos > a {
     padding: 1rem;
     font-size: 20px;
-}
-
-.fundo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: var(--transicao);
-    background-image: linear-gradient(#000b, #0000);
-    visibility: hidden;
 }
 
 /* Sobre Mim */
