@@ -29,10 +29,6 @@ p {
   line-height: 1.8;
 }
 
-li {
-  list-style: none;
-}
-
 a {
   display: block;
   text-decoration: none;

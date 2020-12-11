@@ -56,6 +56,7 @@ header {
 .menu {
     display: none;
     position: absolute;
+    right: 0;
     width: 50vw;
     height: 72vh;
     border: 2px solid var(--borda);
@@ -86,6 +87,7 @@ header {
 
 .atalhos > li {
     width: 100%;
+    list-style: none;
 }
 
 .menu__link {
@@ -131,8 +133,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    border: 4px var(--borda);
-    border-style: dotted none dotted none;
 }
 
 .carrossel__imagem {
@@ -232,4 +232,14 @@ header {
 
 .mensagem {
     min-height: 7rem;
+}
+
+.separador {
+    width: 24vw;
+    margin: 1rem auto;
+}
+
+.separador img {
+    width: 24vw;
+    color: var(--borda);
 }
