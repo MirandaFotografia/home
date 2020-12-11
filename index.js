@@ -1,4 +1,4 @@
-// Carrossel de Fotos
+// Carrossel
 
 const botaoEsq = document.querySelector('#voltar')
 const botaoDir = document.querySelector('#avancar')
@@ -27,3 +27,20 @@ const avancar = () => {
 
 botaoEsq.addEventListener('click', voltar)
 botaoDir.addEventListener('click', avancar)
+
+// Mural
+
+const numFotos = 33
+const mural = document.querySelector('#mural')
+const fotos = []
+
+for (let i = 0; i < numFotos; i ++) {
+    fotos[i] = document.createElement('figure')
+    fotos[i].classList.add('imagem')
+    fotos[i].tabIndex = i + 1
+    const imagem = document.createElement('img')
+    imagem.classList.add('foto')
+    imagem.src = `./assets/fotos/foto_${('000' + (i + 1)).slice(-4)}.jpeg`
+    fotos[i].append(imagem)
+    mural.insertBefore(fotos[i], mural.firstChild)
+}
