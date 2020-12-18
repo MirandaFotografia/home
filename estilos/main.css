@@ -37,6 +37,16 @@ a:active {
     color: #660636;
 }
 
+.separador {
+    width: 24vw;
+    margin: 1rem auto;
+}
+
+.separador img {
+    width: 24vw;
+    color: var(--borda);
+}
+
 /* Header */
 
 header {
@@ -200,46 +210,37 @@ header {
     border-top: 4px dotted var(--borda);
 }
 
-/* Formulário de Contato */
+/* Contato */
 
-.campo {
-    margin: .25rem;
-}
-
-.info,
-.botao {
-    width: 100%;
-    height: auto;
-    padding: .5rem .25rem;
-    border: 2px solid var(--borda);
-    border-radius: .25rem .25rem 0 0;
+.contato {
+    padding: .75rem;
     margin: .5rem auto;
-    outline-color: var(--cor);
-    background-color: var(--cor);
-    color: var(--texto);
-    font-size: 16px;
 }
 
-.botao {
-    font-size: 26px;
+.contato__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid var(--borda);
+    border-radius: .25rem;
+    font-size: 20px;
 }
 
-.info:focus, 
-.botao:focus {
-    background-color: var(--texto);
+.contato__link:hover, 
+.contato__link:active {
+    background-color: var(--borda);
     color: var(--cor);
 }
 
-.mensagem {
-    min-height: 7rem;
+/* Rodapé */
+
+footer {
+    margin-bottom: 0;
 }
 
-.separador {
-    width: 24vw;
-    margin: 1rem auto;
-}
-
-.separador img {
-    width: 24vw;
-    color: var(--borda);
+footer a {
+    display: inline-block;
+    
 }
