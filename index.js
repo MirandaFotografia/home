@@ -34,13 +34,19 @@ const numFotos = 33
 const mural = document.querySelector('#mural')
 const fotos = []
 
-for (let i = 0; i < numFotos; i ++) {
+for (let i = 0; i < numFotos; i++) {
     fotos[i] = document.createElement('figure')
     fotos[i].classList.add('imagem')
-    fotos[i].tabIndex = i + 1
+    fotos[i].tabIndex = numFotos - i
     const imagem = document.createElement('img')
+    const alt = `./assets/alts/alt_${('000' + (i + 1)).slice(-4)}.txt`
     imagem.classList.add('foto')
     imagem.src = `./assets/fotos/foto_${('000' + (i + 1)).slice(-4)}.jpeg`
+    fetch(alt)
+        .then(resposta => resposta.text())
+        .then(texto => {
+            imagem.alt = texto
+        })
     fotos[i].append(imagem)
     mural.insertBefore(fotos[i], mural.firstChild)
 }

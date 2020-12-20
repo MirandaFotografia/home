@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/269b8a45dd.js" crossorigin="anonymous"></script>
+    <script src="./pacotes.js" defer></script>
     <link rel="stylesheet" href="./estilos/basic.css">
     <link rel="stylesheet" href="./estilos/main.css">
     <title>Miranda Fotografia - Pacotes</title>
@@ -23,15 +24,15 @@
             <nav class="menu">
                 <ul class="atalhos">
                     <li>
-                        <a class="menu__link" rel="noopener noreferrer" href="./sobre.html">
-                            <i class="icone fas fa-user-circle"></i>
-                            <span class="menu__texto">Sobre Mim</span>
+                        <a class="menu__link" rel="noopener noreferrer" href="./">
+                            <i class="icone fas fa-home"></i>
+                            <span class="menu__texto">Início</span>
                         </a>
                     </li>
                     <li>
-                        <a class="menu__link" rel="noopener noreferrer" href="./pacotes.html">
-                            <i class="icone fas fa-camera-retro"></i>
-                            <span class="menu__texto">Pacotes</span>
+                        <a class="menu__link" rel="noopener noreferrer" href="./sobre.html">
+                            <i class="icone fas fa-user-circle"></i>
+                            <span class="menu__texto">Sobre Mim</span>
                         </a>
                     </li>
                     <li>
@@ -47,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu__link" rel="noopener noreferrer" href="./#contato">
+                        <a class="menu__link" rel="noopener noreferrer" href="./pacotes.html#contato">
                             <i class="icone fas fa-envelope"></i>
                             <span class="menu__texto">Contato</span>
                         </a>
@@ -59,15 +60,7 @@
     <main>
         <section>
             <h2>Pacotes disponíveis</h2>
-            <figure class="pacote">
-                <img class="foto" src="./assets/pacotes/pacote_001.jpeg" alt="">
-            </figure>
-            <figure class="pacote">
-                <img class="foto" src="./assets/pacotes/pacote_002.jpeg" alt="">
-            </figure>
-            <figure class="pacote">
-                <img class="foto" src="./assets/pacotes/pacote_003.jpeg" alt="Pacote indisponível">
-            </figure>
+            <div class="pacotes" id="pacotes"></div>
         </section>
         <div class="separador">
             <img src="./assets/logo/ramo.jpeg" alt="">
@@ -85,9 +78,10 @@
         </section>
     </main>
     <footer>
-        Este site foi desenvolvido por <a href="https://github.com/ArturDeAndrade" rel="noopener noreferrer">Artur de
-            Andrade</a>.
-        Contato profissional: <a href="mailto:artur.de.andrade@pm.me">artur.de.andrade@pm.me</a>
+        <span class="credito">
+            <p>Este site foi desenvolvido por <a href="https://github.com/ArturDeAndrade" rel="noopener noreferrer">Artur de Andrade</a>.</p>
+            <p>Contato profissional: <a href="mailto:artur.de.andrade@pm.me">artur.de.andrade@pm.me</a>.</p>
+        </span>
     </footer>
 </body>
 
