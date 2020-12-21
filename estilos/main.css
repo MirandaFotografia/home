@@ -6,7 +6,6 @@ body {
 
 header, footer, section {
     padding: .5em;
-    margin: 1em 0;
 }
 
 h1, h2, h3, h4 {
@@ -51,16 +50,21 @@ a:active {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .inicio:visited {
     color: var(--texto);
 }
 
+.logo {
+    max-width: 72vw;
+}
+
 .conteiner {
-    display: inline-block;
-    position: relative;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 .menu {
@@ -129,7 +133,7 @@ header {
 
 .carrossel {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem 0;
 }
@@ -238,10 +242,6 @@ header {
 }
 
 /* Rodapé */
-
-footer {
-    margin-bottom: 0;
-}
 
 .credito {
     font-size: 14px;
