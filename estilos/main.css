@@ -1,3 +1,5 @@
+
+
 body {
     background-color: var(--fundo);
     color: var(--texto);
@@ -5,7 +7,7 @@ body {
 }
 
 header, footer, section {
-    padding: .5em;
+    padding: .5rem;
 }
 
 h1, h2, h3, h4 {
@@ -53,6 +55,10 @@ header {
     justify-content: center;
 }
 
+.inicio {
+    margin: 2rem 0;
+}
+
 .inicio:visited {
     color: var(--texto);
 }
@@ -63,8 +69,8 @@ header {
 
 .conteiner {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: .75rem;
+    right: .75rem;
 }
 
 .menu {
@@ -174,21 +180,23 @@ header {
     border: 1px solid var(--borda);
 }
 
-.imagem {
-    transition: var(--transicao);
-}
-
-.imagem:focus {
-    outline: none;
-    transform: scale(3.2);
-}
-
-.imagem:nth-child(3n - 2):focus {
-    transform: scale(3.2) translateX(32.5%);
-}
-
-.imagem:nth-child(3n):focus {
-    transform: scale(3.2) translateX(-32.5%);
+@media (max-width: 599px) {
+    .imagem {
+        transition: var(--transicao);
+    }
+    
+    .imagem:focus {
+        outline: none;
+        transform: scale(3.2);
+    }
+    
+    .imagem:nth-child(3n - 2):focus {
+        transform: scale(3.2) translateX(32.5%);
+    }
+    
+    .imagem:nth-child(3n):focus {
+        transform: scale(3.2) translateX(-32.5%);
+    }
 }
 
 /* Feedbacks */
@@ -204,7 +212,7 @@ header {
 
 .feedback {
     display: flow-root;
-    padding: .5em;
+    padding: .5rem;
     margin-top: 1rem;
 }
 
