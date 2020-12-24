@@ -176,8 +176,8 @@ header {
 
 .foto {
     width: 100%;
-    height: auto;
     border: 1px solid var(--borda);
+    border-radius: .5rem;
 }
 
 @media (max-width: 599px) {
@@ -255,12 +255,32 @@ header {
     font-size: 14px;
 }
 
+.credito p {
+    line-height: 1.4;
+}
+
 footer a {
     display: inline-block;   
 }
 
 /* Pacotes */
 
-.pacotes figure {
+@media (min-width: 600px) {
+    .pacotes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: .75rem;
+    }
+
+    .pacote {
+        place-self: center;
+    }
+}
+
+.pacote {
+    max-width: 96vw;
+    max-height: 92vh;
+    border: 2px solid var(--borda);
+    border-radius: .25rem;
     margin-top: 1rem;
 }

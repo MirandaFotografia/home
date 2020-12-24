@@ -30,7 +30,7 @@ botaoDir.addEventListener('click', avancar)
 
 // Mural
 
-const numFotos = 33
+const numFotos = 45
 const mural = document.querySelector('#mural')
 const fotos = []
 
