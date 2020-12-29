@@ -48,6 +48,17 @@ a:active {
     color: var(--borda);
 }
 
+@media (min-width: 900px) {
+    section:not(.carrossel) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section > h2 {
+        border-style: none dashed dashed dashed;
+    }
+}
+
 /* Header */
 
 header {
@@ -202,6 +213,16 @@ header {
 
 /* Feedbacks */
 
+.feedback {
+    display: flow-root;
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+.feedback:not(:first-of-type) {
+    border-top: 4px dotted var(--borda);
+}
+
 .perfil {
     float: right;
     width: 10rem;
@@ -211,14 +232,10 @@ header {
     shape-outside: circle(50%);
 }
 
-.feedback {
-    display: flow-root;
-    padding: .5rem;
-    margin-top: 1rem;
-}
-
-.feedback:not(:first-of-type) {
-    border-top: 4px dotted var(--borda);
+@media (min-width: 900px) {
+    .feedback {
+        width: 66vw;
+    }
 }
 
 /* Contato */
@@ -265,6 +282,20 @@ footer a {
     display: inline-block;   
 }
 
+@media (min-width: 600px) {
+    .credito p {
+        display: inline;
+    }
+}
+
+/* Sobre Mim */
+
+@media (min-width: 900px) {
+    .sobre {
+        width: 66vw;
+    }
+}
+
 /* Pacotes */
 
 .pacotes {
@@ -277,6 +308,12 @@ footer a {
     .pacotes {
         grid-template-columns: 1fr 1fr;
         grid-gap: .75rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .pacotes {
+        grid-gap: 3rem;
     }
 }
 
