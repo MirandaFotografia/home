@@ -148,6 +148,7 @@ header {
     display: none;
     height: 20rem;
     border: 2px solid var(--borda);
+    border-radius: .25rem;
 }
 
 .carrossel__botao {
@@ -160,6 +161,10 @@ header {
 
 .moldura > .carrossel__imagem {
     display: initial;
+}
+
+.lateral > .carrossel__imagem {
+    height: 17rem;
 }
 
 /* Mural de Fotos */

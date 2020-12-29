@@ -30,14 +30,31 @@ for (let i = 0; i < numMold; i++) {
     molduras[i].append(imagens[i])
 }
 
-const redimensionar = midia => {
-    window.location.reload()
+if (desktop.matches) {
+    molduras[0].classList.add('lateral')
+    molduras[3].classList.add('lateral')
+} else if (tablet_hor.matches) {
+    molduras[0].classList.add('lateral')
+    molduras[2].classList.add('lateral')
 }
 
-mobile.addEventListener('change', redimensionar)
-tablet_ver.addEventListener('change', redimensionar)
-tablet_hor.addEventListener('change', redimensionar)
-desktop.addEventListener('change', redimensionar)
+const redimensionar = midia => {
+    molduras.forEach(moldura => moldura.remove())
+    numMold = mobile.matches ? 1 : desktop.matches ? 4 : tablet_hor.matches ? 3 : 2
+    for (let i = 0; i < numMold; i++) {
+        molduras[i] = document.createElement('figure')
+        molduras[i].classList.add("moldura")
+        carrossel.insertBefore(molduras[i], botaoDir)
+        molduras[i].append(imagens[i])
+    }
+    if (desktop.matches) {
+        molduras[0].classList.add('lateral')
+        molduras[3].classList.add('lateral')
+    } else if (tablet_hor.matches) {
+        molduras[0].classList.add('lateral')
+        molduras[2].classList.add('lateral')
+    }
+}
 
 const voltar = () => {
     for (let i = 0; i < numMold; i++) {
@@ -56,6 +73,11 @@ const avancar = () => {
         molduras[i].removeChild(molduras[i].firstChild)
     }
 }
+
+mobile.addEventListener('change', redimensionar)
+tablet_ver.addEventListener('change', redimensionar)
+tablet_hor.addEventListener('change', redimensionar)
+desktop.addEventListener('change', redimensionar)
 
 botaoEsq.addEventListener('click', voltar)
 botaoDir.addEventListener('click', avancar)
