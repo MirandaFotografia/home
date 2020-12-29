@@ -150,10 +150,6 @@ header {
     border: 2px solid var(--borda);
 }
 
-.selecionada {
-    display: initial;
-}
-
 .carrossel__botao {
     width: 2rem;
     height: 2rem;
@@ -162,8 +158,8 @@ header {
     font-size: 42px;
 }
 
-#voltar {
-    visibility: hidden;
+.moldura > .carrossel__imagem {
+    display: initial;
 }
 
 /* Mural de Fotos */
@@ -233,9 +229,10 @@ header {
     align-items: center;
     width: 10rem;
     height: 3rem;
-    border: 1px solid var(--borda);
+    border: 2px solid var(--borda);
     border-radius: .25rem;
     margin: .5rem 0;
+    background-color: var(--cor);
     font-size: 20px;
 }
 
@@ -265,19 +262,21 @@ footer a {
 
 /* Pacotes */
 
+.pacotes {
+    display: grid;
+    grid-template-columns: 85vw;
+    justify-content: center;
+}
+
 @media (min-width: 600px) {
     .pacotes {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: .75rem;
-    }
-
-    .pacote {
-        place-self: center;
     }
 }
 
 .pacote {
+    place-self: center;
     max-width: 96vw;
     max-height: 92vh;
     border: 2px solid var(--borda);

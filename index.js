@@ -1,27 +1,59 @@
 // Carrossel
+const mobile = window.matchMedia("(max-width: 599px)")
+const tablet_ver = window.matchMedia("(min-width: 600px)")
+const tablet_hor = window.matchMedia("(min-width: 900px)")
+const desktop = window.matchMedia("(min-width: 1200px)")
 
+const carrossel = document.querySelector('#carrossel')
 const botaoEsq = document.querySelector('#voltar')
 const botaoDir = document.querySelector('#avancar')
-const imagens = document.querySelectorAll('.carrossel__imagem')
-let ind = 0
-imagens[ind].classList.toggle("selecionada")
+
+const numImgs = 7
+const getImg = indice => `./assets/banner/banner_${('00' + (indice + 1)).slice(-3)}.jpeg`
+const getAlt = indice => `./assets/banner/alt_${('00' + (indice + 1)).slice(-3)}.txt`
+const imagens = []
+for (let i = 0; i < numImgs; i++) {
+    imagens[i] = document.createElement('img')
+    imagens[i].classList.add("carrossel__imagem")
+    imagens[i].src = getImg(i)
+    const alt = getAlt(i)
+    fetch(alt).then(resposta => resposta.text()).then(texto => imagens[i].alt = texto)
+}
+
+let numMold = mobile.matches ? 1 : desktop.matches ? 4 : tablet_hor.matches ? 3 : 2
+const molduras = []
+
+for (let i = 0; i < numMold; i++) {
+    molduras[i] = document.createElement('figure')
+    molduras[i].classList.add("moldura")
+    carrossel.insertBefore(molduras[i], botaoDir)
+    molduras[i].append(imagens[i])
+}
+
+const redimensionar = midia => {
+    window.location.reload()
+}
+
+mobile.addEventListener('change', redimensionar)
+tablet_ver.addEventListener('change', redimensionar)
+tablet_hor.addEventListener('change', redimensionar)
+desktop.addEventListener('change', redimensionar)
 
 const voltar = () => {
-    botaoDir.style.visibility = "initial"
-    imagens[ind].classList.toggle("selecionada")
-    ind--
-    imagens[ind].classList.toggle("selecionada")
-    if (ind === 0) {
-        botaoEsq.style.visibility = "hidden"
+    for (let i = 0; i < numMold; i++) {
+        let ind = imagens.indexOf(molduras[i].firstChild)
+        ind - 1 < 0 ? ind = numImgs - 1 : ind--
+        molduras[i].append(imagens[ind])
+        molduras[i].removeChild(molduras[i].firstChild)
     }
 }
+
 const avancar = () => {
-    botaoEsq.style.visibility = "initial"
-    imagens[ind].classList.toggle("selecionada")
-    ind++
-    imagens[ind].classList.toggle("selecionada")
-    if (ind === 4) {
-        botaoDir.style.visibility = "hidden"
+    for (let i = numMold - 1; i >= 0; i--) {
+        let ind = imagens.indexOf(molduras[i].firstChild)
+        ind + 1 >= numImgs ? ind = 0 : ind++
+        molduras[i].append(imagens[ind])
+        molduras[i].removeChild(molduras[i].firstChild)
     }
 }
 
@@ -44,9 +76,7 @@ for (let i = 0; i < numFotos; i++) {
     imagem.src = `./assets/fotos/foto_${('000' + (i + 1)).slice(-4)}.jpeg`
     fetch(alt)
         .then(resposta => resposta.text())
-        .then(texto => {
-            imagem.alt = texto
-        })
+        .then(texto => imagem.alt = texto)
     fotos[i].append(imagem)
     mural.insertBefore(fotos[i], mural.firstChild)
 }
