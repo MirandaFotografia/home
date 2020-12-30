@@ -90,8 +90,6 @@ const fotos = []
 
 for (let i = 0; i < numFotos; i++) {
     fotos[i] = document.createElement('figure')
-    fotos[i].classList.add('imagem')
-    fotos[i].tabIndex = numFotos - i
     const imagem = document.createElement('img')
     const alt = `./assets/alts/alt_${('000' + (i + 1)).slice(-4)}.txt`
     imagem.classList.add('foto')
@@ -102,3 +100,34 @@ for (let i = 0; i < numFotos; i++) {
     fotos[i].append(imagem)
     mural.insertBefore(fotos[i], mural.firstChild)
 }
+
+const body = document.body
+const destaque = document.createElement('div')
+const botaoFechar = document.createElement('button')
+const icone = document.createElement('i')
+destaque.classList.add('destaque')
+botaoFechar.classList.add('fechar')
+icone.classList.add('icone', 'fas', 'fa-times')
+
+botaoFechar.append(icone)
+destaque.append(botaoFechar)
+body.append(destaque)
+
+body.addEventListener('click', (imagem) => {
+    const foto = imagem.target.cloneNode(true)
+    if (foto.classList[0] !== 'foto') {
+        return
+    } else if (mobile.matches) {
+        destaque.append(foto)
+        destaque.style.display = "grid"
+        botaoFechar.style.display = "initial"
+    }
+})
+
+const fechar = () => {
+    destaque.style.display = "none"
+    botaoFechar.style.display = "none"
+    destaque.lastChild.remove()
+}
+
+botaoFechar.addEventListener('click', fechar)

@@ -192,22 +192,36 @@ header {
     border-radius: .5rem;
 }
 
+.fechar {
+    display: none;
+}
+
 @media (max-width: 599px) {
-    .imagem {
-        transition: var(--transicao);
+    .destaque {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000d;
     }
-    
-    .imagem:focus {
-        outline: none;
-        transform: scale(3.2);
+
+    .fechar {
+        position: absolute;
+        top: .25rem;
+        right: .25rem;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid var(--borda);
+        border-radius: 50%;
+        background-color: var(--cor);
     }
-    
-    .imagem:nth-child(3n - 2):focus {
-        transform: scale(3.2) translateX(32.5%);
-    }
-    
-    .imagem:nth-child(3n):focus {
-        transform: scale(3.2) translateX(-32.5%);
+
+    .destaque img {
+        place-self: center;
+        width: 90%;
+        border: 1px solid var(--borda);
+        border-radius: .5rem;
     }
 }
 
@@ -228,7 +242,7 @@ header {
     width: 10rem;
     border: 1px solid var(--borda);
     border-radius: 50%;
-    margin: .75rem;
+    margin: 1rem;
     shape-outside: circle(50%);
 }
 
