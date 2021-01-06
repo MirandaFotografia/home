@@ -1,4 +1,5 @@
-
+@import 'variaveis.css';
+@import 'basico.css';
 
 body {
     background-color: var(--fundo);
@@ -24,10 +25,6 @@ h2 {
 
 a:link {
     color: var(--link);
-}
-
-a:visited {
-    color: #660666;
 }
 
 a:hover {
@@ -57,6 +54,10 @@ a:active {
     section > h2 {
         border-style: none dashed dashed dashed;
     }
+}
+
+.icone {
+    font-size: 1.8rem;
 }
 
 /* Header */
@@ -140,10 +141,6 @@ header {
 
 .menu__link:active {
     background-color: var(--link);
-}
-
-.icone {
-    font-size: 1.8rem;
 }
 
 /* Carrossel */
@@ -280,6 +277,28 @@ header {
 
 .contato__link .icone {
     margin-right: .5rem;
+}
+
+.botao-wpp {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fundo-wpp {
+    position: fixed;
+    z-index: -1;
+    width: 4.2rem;
+    height: 4.2rem;
+    background-color: var(--cor);
+}
+
+.botao-wpp .icone {
+    font-size: 5.2rem;
+    color: #00e532;
 }
 
 /* Rodapé */

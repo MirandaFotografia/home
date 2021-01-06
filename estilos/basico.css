@@ -1,0 +1,44 @@
+:root {
+  font-size: 16px;
+}
+
+/* @media (max-width: 599px) {  } */
+
+@media (min-width: 600px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+/* @media (min-width: 900px) {  } */
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  margin: 0;
+  transition: var(--transicao);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
