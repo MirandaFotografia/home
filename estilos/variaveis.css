@@ -1,10 +1,10 @@
 :root {
     --transicao: .5s;
-    --fundo: #a27f5f;
-    --cor: #cab6a7;
+    --fundo: hsl(29, 26%, 80%);
+    --cor: hsl(26, 25%, 72%);
     --borda: #4b251b;
     --texto: #2f2523;
-    --link: #660606;
+    --link: hsl(0, 89%, 21%);
     --open: 'Open Sans', sans-serif;
     --proza: 'Proza Libre', sans-serif;
 }

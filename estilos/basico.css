@@ -23,7 +23,20 @@
   padding: 0;
   border: none;
   margin: 0;
-  transition: var(--transicao);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: hsla(13, 47%, 20%, .7);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: hsl(29, 26%, 57%);
 }
 
 html {
