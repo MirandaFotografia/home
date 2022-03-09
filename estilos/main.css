@@ -87,6 +87,8 @@ header {
     left: 0;
     width: 4rem;
     height: 47vh;
+    border: 2px var(--borda);
+    border-style: none dotted dotted none;
     border-radius: 0 1em 1em 0;
     background-color: var(--cor);
 }

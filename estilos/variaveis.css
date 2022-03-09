@@ -2,8 +2,8 @@
     --transicao: .5s;
     --fundo: hsl(29, 26%, 80%);
     --cor: hsl(26, 25%, 72%);
-    --borda: #4b251b;
-    --texto: #2f2523;
+    --borda: hsl(13, 47%, 20%);
+    --texto: hsl(10, 15%, 16%);
     --link: hsl(0, 89%, 21%);
     --open: 'Open Sans', sans-serif;
     --proza: 'Proza Libre', sans-serif;
